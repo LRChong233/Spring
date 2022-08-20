@@ -27,9 +27,15 @@
     <ClInclude Include="src\Spring\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spring\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Spring\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Spring\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

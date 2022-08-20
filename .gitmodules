@@ -1,0 +1,3 @@
+[submodule "Spring/vendor/spdlog"]
+	path = Spring/vendor/spdlog
+	url = https://github.com/gabime/spdlog
