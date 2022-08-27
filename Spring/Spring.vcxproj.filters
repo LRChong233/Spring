@@ -19,6 +19,10 @@
     <ClInclude Include="src\Spring\Log.h">
       <Filter>Spring</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spring\Events\Event.h" />
+    <ClInclude Include="src\Spring\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Spring\Events\KeyEvent.h" />
+    <ClInclude Include="src\Spring\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Spring\Application.cpp">

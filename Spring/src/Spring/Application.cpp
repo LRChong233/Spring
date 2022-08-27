@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "Spring/Events/ApplicationEvent.h"
+#include "Spring/Log.h"
+
 namespace Spring {
 
 	Application::Application()
@@ -15,10 +18,17 @@ namespace Spring {
 
 	void Application::Run()
 	{
-		while (true)
+		WindowResizeEvent e(1280, 720);
+		if (e.IsInCategory(EventCategoryApplication))
 		{
-
+			SP_TRACE(e);
 		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			SP_TRACE(e);
+		}
+
+		while (true);
 	}
 }
 
