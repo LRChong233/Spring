@@ -1,3 +1,6 @@
 [submodule "Spring/vendor/spdlog"]
 	path = Spring/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Spring/vendor/GLFW"]
+	path = Spring/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
