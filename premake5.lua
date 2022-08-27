@@ -18,6 +18,9 @@ project "Spring"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "sppch.h"
+	pchsource "Spring/src/sppch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

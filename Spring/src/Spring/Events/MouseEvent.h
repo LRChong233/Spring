@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Spring {
 
 	class SPRING_API MouseMovedEvent : public Event

@@ -4,6 +4,9 @@
     <Filter Include="Spring">
       <UniqueIdentifier>{D839A6D1-C4DB-D0A7-AD96-E4FB99D757F8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Spring\Events">
+      <UniqueIdentifier>{BC624D86-2823-C9BC-F15D-123A5DDD0D99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Spring.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\Spring\EntryPoint.h">
       <Filter>Spring</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spring\Events\ApplicationEvent.h">
+      <Filter>Spring\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spring\Events\Event.h">
+      <Filter>Spring\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spring\Events\KeyEvent.h">
+      <Filter>Spring\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spring\Events\MouseEvent.h">
+      <Filter>Spring\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spring\Log.h">
       <Filter>Spring</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\Events\Event.h" />
-    <ClInclude Include="src\Spring\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Spring\Events\KeyEvent.h" />
-    <ClInclude Include="src\Spring\Events\MouseEvent.h" />
+    <ClInclude Include="src\sppch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Spring\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\Spring\Log.cpp">
       <Filter>Spring</Filter>
     </ClCompile>
+    <ClCompile Include="src\sppch.cpp" />
   </ItemGroup>
 </Project>
