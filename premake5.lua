@@ -12,7 +12,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
-IncludeDir["GLFW"] = "Spring/vendor/GLFW/inlcude"
+IncludeDir["GLFW"] = "Spring/vendor/GLFW/include"
 
 include "Spring/vendor/GLFW"
 
@@ -63,15 +63,15 @@ project "Spring"
 		}
 
 	filter "configurations:Debug"
-		defines "HZ_DEBUG"
+		defines "SP_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "HZ_RELEASE"
+		defines "SP_RELEASE"
 		symbols "On"
 
 	filter "configurations:Dist"
-		defines "HZ_DIST"
+		defines "SP_DIST"
 		symbols "On"
 
 project "Sandbox"
@@ -110,13 +110,13 @@ project "Sandbox"
 		}
 
 	filter "configurations:Debug"
-		defines "HZ_DEBUG"
+		defines "SP_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "HZ_RELEASE"
+		defines "SP_RELEASE"
 		symbols "On"
 
 	filter "configurations:Dist"
-		defines "HZ_DIST"
+		defines "SP_DIST"
 		symbols "On"
