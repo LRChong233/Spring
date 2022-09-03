@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -106,6 +107,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -128,6 +130,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -150,6 +153,8 @@
     <ClInclude Include="src\Spring\Events\Event.h" />
     <ClInclude Include="src\Spring\Events\KeyEvent.h" />
     <ClInclude Include="src\Spring\Events\MouseEvent.h" />
+    <ClInclude Include="src\Spring\Layer.h" />
+    <ClInclude Include="src\Spring\LayerStack.h" />
     <ClInclude Include="src\Spring\Log.h" />
     <ClInclude Include="src\Spring\Window.h" />
     <ClInclude Include="src\sppch.h" />
@@ -157,6 +162,8 @@
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Spring\Application.cpp" />
+    <ClCompile Include="src\Spring\Layer.cpp" />
+    <ClCompile Include="src\Spring\LayerStack.cpp" />
     <ClCompile Include="src\Spring\Log.cpp" />
     <ClCompile Include="src\sppch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

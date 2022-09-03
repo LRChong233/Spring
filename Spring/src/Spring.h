@@ -3,6 +3,7 @@
 // For use by Spring applications
 
 #include "Spring/Application.h"
+#include "Spring/Layer.h"
 #include "Spring/Log.h"
 
 // ------------ Entry Point ------------------

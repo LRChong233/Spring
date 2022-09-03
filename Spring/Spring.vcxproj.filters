@@ -40,6 +40,12 @@
     <ClInclude Include="src\Spring\Events\MouseEvent.h">
       <Filter>Spring\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spring\Layer.h">
+      <Filter>Spring</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spring\LayerStack.h">
+      <Filter>Spring</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spring\Log.h">
       <Filter>Spring</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Spring\Application.cpp">
+      <Filter>Spring</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Spring\Layer.cpp">
+      <Filter>Spring</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Spring\LayerStack.cpp">
       <Filter>Spring</Filter>
     </ClCompile>
     <ClCompile Include="src\Spring\Log.cpp">
