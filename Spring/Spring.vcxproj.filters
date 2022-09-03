@@ -4,6 +4,9 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
@@ -13,8 +16,14 @@
     <Filter Include="Spring\Events">
       <UniqueIdentifier>{BC624D86-2823-C9BC-F15D-123A5DDD0D99}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Spring\ImGui">
+      <UniqueIdentifier>{02B1D813-EE13-68B8-9799-A06E83DB333B}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -40,6 +49,9 @@
     <ClInclude Include="src\Spring\Events\MouseEvent.h">
       <Filter>Spring\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spring\ImGui\ImGuiLayer.h">
+      <Filter>Spring\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spring\Layer.h">
       <Filter>Spring</Filter>
     </ClInclude>
@@ -53,15 +65,19 @@
       <Filter>Spring</Filter>
     </ClInclude>
     <ClInclude Include="src\sppch.h" />
-    <ClInclude Include="src\Spring\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Spring\Application.cpp">
       <Filter>Spring</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Spring\ImGui\ImGuiLayer.cpp">
+      <Filter>Spring\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Spring\Layer.cpp">
       <Filter>Spring</Filter>
@@ -73,7 +89,5 @@
       <Filter>Spring</Filter>
     </ClCompile>
     <ClCompile Include="src\sppch.cpp" />
-    <ClCompile Include="src\Spring\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>
