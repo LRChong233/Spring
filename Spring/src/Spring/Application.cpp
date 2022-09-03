@@ -3,7 +3,7 @@
 
 #include "Spring/Log.h"
 
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace Spring {
 
