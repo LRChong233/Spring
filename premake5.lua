@@ -17,9 +17,11 @@ IncludeDir["GLFW"] = "Spring/vendor/GLFW/include"
 IncludeDir["Glad"] = "Spring/vendor/Glad/include"
 IncludeDir["ImGui"] = "Spring/vendor/imgui"
 
-include "Spring/vendor/GLFW"
-include "Spring/vendor/Glad"
-include "Spring/vendor/imgui"
+group "Dependencies"
+	include "Spring/vendor/GLFW"
+	include "Spring/vendor/Glad"
+	include "Spring/vendor/imgui"
+group ""
 
 project "Spring"
 	location "Spring"
@@ -69,7 +71,7 @@ project "Spring"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
@@ -135,4 +137,4 @@ project "Sandbox"
 	filter "configurations:Dist"
 		defines "SP_DIST"
 		buildoptions "/MD"
-		symbols "On"
+		optimize "On"
