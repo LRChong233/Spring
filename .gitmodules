@@ -4,3 +4,6 @@
 [submodule "Spring/vendor/GLFW"]
 	path = Spring/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "Spring/vendor/imgui"]
+	path = Spring/vendor/imgui
+	url = https://github.com/TheCherno/imgui
