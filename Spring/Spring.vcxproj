@@ -144,6 +144,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Spring.h" />
     <ClInclude Include="src\Spring\Application.h" />
@@ -153,6 +154,7 @@
     <ClInclude Include="src\Spring\Events\Event.h" />
     <ClInclude Include="src\Spring\Events\KeyEvent.h" />
     <ClInclude Include="src\Spring\Events\MouseEvent.h" />
+    <ClInclude Include="src\Spring\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Spring\Layer.h" />
     <ClInclude Include="src\Spring\LayerStack.h" />
     <ClInclude Include="src\Spring\Log.h" />
@@ -160,8 +162,10 @@
     <ClInclude Include="src\sppch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Spring\Application.cpp" />
+    <ClCompile Include="src\Spring\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Spring\Layer.cpp" />
     <ClCompile Include="src\Spring\LayerStack.cpp" />
     <ClCompile Include="src\Spring\Log.cpp" />
