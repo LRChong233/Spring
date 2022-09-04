@@ -162,9 +162,11 @@
     <ClInclude Include="src\Spring\Events\MouseEvent.h" />
     <ClInclude Include="src\Spring\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Spring\Input.h" />
+    <ClInclude Include="src\Spring\KeyCodes.h" />
     <ClInclude Include="src\Spring\Layer.h" />
     <ClInclude Include="src\Spring\LayerStack.h" />
     <ClInclude Include="src\Spring\Log.h" />
+    <ClInclude Include="src\Spring\MouseButtonCodes.h" />
     <ClInclude Include="src\Spring\Window.h" />
     <ClInclude Include="src\sppch.h" />
   </ItemGroup>
