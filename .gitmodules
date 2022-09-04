@@ -7,3 +7,6 @@
 [submodule "Spring/vendor/imgui"]
 	path = Spring/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "Spring/vendor/glm"]
+	path = Spring/vendor/glm
+	url = https://github.com/g-truc/glm

@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Spring/vendor/GLFW/include"
 IncludeDir["Glad"] = "Spring/vendor/Glad/include"
 IncludeDir["ImGui"] = "Spring/vendor/imgui"
+IncludeDir["glm"] = "Spring/vendor/glm"
 
 group "Dependencies"
 	include "Spring/vendor/GLFW"
@@ -38,7 +39,9 @@ project "Spring"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl",
 	}
 
 	includedirs
@@ -47,7 +50,8 @@ project "Spring"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -107,7 +111,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Spring/vendor/spdlog/include",
-		"Spring/src"
+		"Spring/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links
