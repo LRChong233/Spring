@@ -112,6 +112,7 @@ project "Sandbox"
 	{
 		"Spring/vendor/spdlog/include",
 		"Spring/src",
+		"Spring/vendor"
 		"%{IncludeDir.glm}"
 	}
 
