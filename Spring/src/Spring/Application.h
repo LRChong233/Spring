@@ -7,6 +7,8 @@
 #include "Spring/Events/Event.h"
 #include "Spring/Events/ApplicationEvent.h"
 
+#include "Spring/ImGui/ImGuiLayer.h"
+
 namespace Spring {
 
 	class SPRING_API Application
@@ -29,6 +31,7 @@ namespace Spring {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

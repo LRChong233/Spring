@@ -32,7 +32,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Spring::ImGuiLayer());
 	}
 	~Sandbox(){}
 };
