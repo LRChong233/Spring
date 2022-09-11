@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef SP_PLATFORM_WINDOWS
-	#ifdef SP_BUILD_DLL
-		#define SPRING_API __declspec(dllexport)
-	#else
-		#define SPRING_API __declspec(dllimport)
-	#endif
+#if HZ_DYNAMIC_LINK
+		#ifdef SP_BUILD_DLL
+			#define SPRING_API __declspec(dllexport)
+		#else
+			#define SPRING_API __declspec(dllimport)
+		#endif
+#else
+	#define SPRING_API
+#endif
 #else
 	#error Spring only support Windows!
 #endif
