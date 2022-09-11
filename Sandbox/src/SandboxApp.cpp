@@ -1,6 +1,6 @@
 #include <Spring.h>
 
-#include "imgui/imgui.h"
+//#include "imgui/imgui.h"
 
 class ExampleLayer : public Spring::Layer
 {
@@ -16,12 +16,12 @@ public:
 			SP_TRACE("Tab key is pressed (poll)!");
 	}
 
-	virtual void OnImGuiRender() override
-	{
-		ImGui::Begin("Text");
-		ImGui::Text("Hello World!");
-		ImGui::End();
-	}
+	//virtual void OnImGuiRender() override
+	//{
+	//	ImGui::Begin("Text");
+	//	ImGui::Text("Hello World!");
+	//	ImGui::End();
+	//}
 
 	void OnEvent(Spring::Event& event) override
 	{

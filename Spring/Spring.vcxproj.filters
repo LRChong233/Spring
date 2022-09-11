@@ -1355,6 +1355,9 @@
     <ClCompile Include="src\Spring\Application.cpp">
       <Filter>src\Spring</Filter>
     </ClCompile>
+    <ClCompile Include="src\Spring\ImGui\ImGuiBuild.cpp">
+      <Filter>src\Spring\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Spring\ImGui\ImGuiLayer.cpp">
       <Filter>src\Spring\ImGui</Filter>
     </ClCompile>
@@ -1370,6 +1373,5 @@
     <ClCompile Include="src\sppch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Spring\ImGui\ImGuiBuild.cpp" />
   </ItemGroup>
 </Project>
