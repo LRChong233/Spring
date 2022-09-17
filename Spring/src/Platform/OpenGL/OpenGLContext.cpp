@@ -18,6 +18,12 @@ namespace Spring {
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		SP_CORE_ASSERT(status, "Failed to initialize Glad!");
+
+		SP_CORE_INFO("OpenGL Info:");
+		SP_CORE_INFO("  Vendor: {0}", glGetString(GL_VENDOR));
+		SP_CORE_INFO("  Renderer: {0}", glGetString(GL_RENDERER));
+		SP_CORE_INFO("  Version: {0}", glGetString(GL_VERSION));
+
 	}
 
 	void OpenGLContext::SwapBuffers()
