@@ -159,6 +159,7 @@
     <ClInclude Include="src\Spring\Log.h" />
     <ClInclude Include="src\Spring\MouseButtonCodes.h" />
     <ClInclude Include="src\Spring\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Spring\Renderer\Shader.h" />
     <ClInclude Include="src\Spring\Window.h" />
     <ClInclude Include="src\sppch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -590,6 +591,7 @@
     <ClCompile Include="src\sppch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Spring\Renderer\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
