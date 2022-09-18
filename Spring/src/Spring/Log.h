@@ -26,12 +26,12 @@ namespace Spring {
 #define SP_CORE_INFO(...)     ::Spring::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define SP_CORE_WARN(...)     ::Spring::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define SP_CORE_ERROR(...)    ::Spring::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define SP_CORE_FATAL(...)    ::Spring::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define SP_CORE_FATAL(...)    ::Spring::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // Client log macros
 #define SP_TRACE(...)         ::Spring::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define SP_INFO(...)          ::Spring::Log::GetClientLogger()->info(__VA_ARGS__)
 #define SP_WARN(...)          ::Spring::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define SP_ERROR(...)         ::Spring::Log::GetClientLogger()->error(__VA_ARGS__)
-#define SP_FATAL(...)         ::Spring::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define SP_FATAL(...)         ::Spring::Log::GetClientLogger()->critical(__VA_ARGS__)
 
