@@ -11,7 +11,7 @@ namespace Spring {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::API::None:		SP_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+		case RendererAPI::API::None:	SP_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
 		case RendererAPI::API::OpenGL:	return new OpenGLVertexBuffer(vertices, size);
 		}
 
@@ -23,7 +23,7 @@ namespace Spring {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::API::None:		SP_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+		case RendererAPI::API::None:	SP_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
 		case RendererAPI::API::OpenGL:	return new OpenGLIndexBuffer(indices, size);
 		}
 
