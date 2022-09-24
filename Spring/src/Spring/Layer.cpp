@@ -8,9 +8,4 @@ namespace Spring {
 	{
 	}
 
-	Layer::~Layer()
-	{
-
-	}
-
 }
