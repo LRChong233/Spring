@@ -12,6 +12,17 @@
 
 #include "Spring/ImGui/ImGuiLayer.h"
 
+// ---Renderer--------------------------------
+#include "Spring/Renderer/Renderer.h"
+#include "Spring/Renderer/RenderCommand.h"
+
+#include "Spring/Renderer/Buffer.h"
+#include "Spring/Renderer/Shader.h"
+#include "Spring/Renderer/VertexArray.h"
+
+#include "Spring/Renderer/OrthographicCamera.h"
+// -------------------------------------------
+
 // ------------ Entry Point ------------------
 #include "Spring//EntryPoint.h"
 // -------------------------------------------

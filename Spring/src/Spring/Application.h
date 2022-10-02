@@ -9,15 +9,9 @@
 
 #include "Spring/ImGui/ImGuiLayer.h"
 
-#include "Spring/Renderer/Shader.h"
-#include "Spring/Renderer/Buffer.h"
-#include "Spring/Renderer/VertexArray.h"
-
-#include "Spring/Renderer/OrthographicCamera.h"
-
 namespace Spring {
 
-	class SPRING_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -36,18 +30,12 @@ namespace Spring {
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
