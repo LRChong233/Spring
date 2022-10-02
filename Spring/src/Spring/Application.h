@@ -13,6 +13,8 @@
 #include "Spring/Renderer/Buffer.h"
 #include "Spring/Renderer/VertexArray.h"
 
+#include "Spring/Renderer/OrthographicCamera.h"
+
 namespace Spring {
 
 	class SPRING_API Application
@@ -44,6 +46,8 @@ namespace Spring {
 
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
