@@ -149,6 +149,7 @@
     <ClInclude Include="src\Spring.h" />
     <ClInclude Include="src\Spring\Application.h" />
     <ClInclude Include="src\Spring\Core.h" />
+    <ClInclude Include="src\Spring\Core\Timestep.h" />
     <ClInclude Include="src\Spring\EntryPoint.h" />
     <ClInclude Include="src\Spring\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Spring\Events\Event.h" />

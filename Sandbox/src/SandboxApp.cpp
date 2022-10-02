@@ -116,22 +116,22 @@ public:
 		m_BlueShader.reset(new Spring::Shader(blueShaderVertexSrc, blueShaderFragmentSrc));
 	}
 
-	void OnUpdate() override
+	void OnUpdate(Spring::Timestep ts) override
 	{
 		if (Spring::Input::IsKeyPressed(SP_KEY_LEFT))
-			m_CameraPosition.x -= m_CameraMoveSpeed;
+			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
 		else if (Spring::Input::IsKeyPressed(SP_KEY_RIGHT))
-			m_CameraPosition.x += m_CameraMoveSpeed;
+			m_CameraPosition.x += m_CameraMoveSpeed * ts;
 
 		if (Spring::Input::IsKeyPressed(SP_KEY_UP))
-			m_CameraPosition.y += m_CameraMoveSpeed;
+			m_CameraPosition.y += m_CameraMoveSpeed * ts;
 		else if (Spring::Input::IsKeyPressed(SP_KEY_DOWN))
-			m_CameraPosition.y -= m_CameraMoveSpeed;
+			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
 
 		if (Spring::Input::IsKeyPressed(SP_KEY_A))
-			m_CameraRotation += m_CameraRotationSpeed;
+			m_CameraRotation += m_CameraRotationSpeed * ts;
 		else if (Spring::Input::IsKeyPressed(SP_KEY_D))
-			m_CameraRotation -= m_CameraRotationSpeed;
+			m_CameraRotation -= m_CameraRotationSpeed * ts;
 
 		Spring::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		Spring::RenderCommand::Clear();

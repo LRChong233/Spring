@@ -7,6 +7,7 @@
 #include "Spring/Events/Event.h"
 #include "Spring/Events/ApplicationEvent.h"
 
+#include "Core/Timestep.h"
 #include "Spring/ImGui/ImGuiLayer.h"
 
 namespace Spring {
@@ -36,6 +37,7 @@ namespace Spring {
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
+		float m_LastFrameTime = 0.0f;
 	private:
 		static Application* s_Instance;
 	};

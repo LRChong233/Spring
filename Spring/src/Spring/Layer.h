@@ -3,6 +3,8 @@
 #include "Spring/Core.h"
 #include "Spring/Events/Event.h"
 
+#include "Core/Timestep.h"
+
 namespace Spring {
 
 	class SPRING_API Layer 
@@ -13,7 +15,7 @@ namespace Spring {
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 
