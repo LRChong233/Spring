@@ -20,7 +20,7 @@ public:
 			0.0f, 0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<Spring::VertexBuffer> vertexBuffer;
+		Spring::Ref<Spring::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Spring::VertexBuffer::Create(vertices, sizeof(vertices)));
 		Spring::BufferLayout layout = {
 			{Spring::ShaderDataType::Float3, "a_Position"},
@@ -30,7 +30,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<Spring::IndexBuffer> indexBuffer;
+		Spring::Ref<Spring::IndexBuffer> indexBuffer;
 		indexBuffer.reset(Spring::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
@@ -80,7 +80,7 @@ public:
 			-0.5f,  0.5f, 0.0f
 		};
 
-		std::shared_ptr<Spring::VertexBuffer> squareVB;
+		Spring::Ref<Spring::VertexBuffer> squareVB;
 		squareVB.reset(Spring::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
 			{ Spring::ShaderDataType::Float3, "a_Position" }
@@ -88,7 +88,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<Spring::IndexBuffer> squareIB;
+		Spring::Ref<Spring::IndexBuffer> squareIB;
 		squareIB.reset(Spring::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -184,11 +184,11 @@ public:
 	}
 
 private:
-	std::shared_ptr<Spring::Shader> m_Shader;
-	std::shared_ptr<Spring::VertexArray> m_VertexArray;
+	Spring::Ref<Spring::Shader> m_Shader;
+	Spring::Ref<Spring::VertexArray> m_VertexArray;
 
-	std::shared_ptr<Spring::Shader> m_FlatColorShader;
-	std::shared_ptr<Spring::VertexArray> m_SquareVA;
+	Spring::Ref<Spring::Shader> m_FlatColorShader;
+	Spring::Ref<Spring::VertexArray> m_SquareVA;
 
 	Spring::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
