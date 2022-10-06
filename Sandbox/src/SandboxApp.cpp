@@ -69,7 +69,7 @@ public:
 			}
 		)";
 
-		m_Shader.reset(Spring::Shader::Create(vertexSrc, fragmentSrc));
+		m_Shader = Spring::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
 
 
 		m_SquareVA.reset(Spring::VertexArray::Create());
@@ -125,9 +125,9 @@ public:
 			}
 		)";
 
-		m_FlatColorShader.reset(Spring::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+		m_FlatColorShader = Spring::Shader::Create("FlatColor", flatColorShaderVertexSrc, flatColorShaderFragmentSrc);
 
-		m_TextureShader.reset(Spring::Shader::Create("assets/shaders/Texture.glsl"));
+		m_TextureShader = Spring::Shader::Create("assets/shaders/Texture.glsl");
 
 		m_Texture = Spring::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_ChernoLogoTexture = Spring::Texture2D::Create("assets/textures/ChernoLogo.png");

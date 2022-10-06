@@ -26,7 +26,7 @@ namespace Spring{
 		Compile(shaderSources);
 	}
 
-	OpenGLShader::OpenGLShader(const std::string & vertexSrc, const std::string & fragmentSrc)
+	OpenGLShader::OpenGLShader(const std::string& name, const std::string & vertexSrc, const std::string & fragmentSrc)
 	{
 		std::unordered_map<GLenum, std::string> sources;
 		sources[GL_VERTEX_SHADER] = vertexSrc;
