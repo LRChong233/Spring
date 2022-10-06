@@ -144,6 +144,7 @@
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
@@ -170,6 +171,7 @@
     <ClInclude Include="src\Spring\Renderer\Renderer.h" />
     <ClInclude Include="src\Spring\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Spring\Renderer\Shader.h" />
+    <ClInclude Include="src\Spring\Renderer\Texture.h" />
     <ClInclude Include="src\Spring\Renderer\VertexArray.h" />
     <ClInclude Include="src\Spring\Window.h" />
     <ClInclude Include="src\sppch.h" />
@@ -595,6 +597,7 @@
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
@@ -610,6 +613,7 @@
     <ClCompile Include="src\Spring\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Spring\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\Spring\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Spring\Renderer\Texture.cpp" />
     <ClCompile Include="src\Spring\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\sppch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

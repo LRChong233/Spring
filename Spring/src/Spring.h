@@ -18,6 +18,7 @@
 
 #include "Spring/Renderer/Buffer.h"
 #include "Spring/Renderer/Shader.h"
+#include "Spring/Renderer/Texture.h"
 #include "Spring/Renderer/VertexArray.h"
 
 #include "Spring/Renderer/OrthographicCamera.h"

@@ -73,18 +73,19 @@ public:
 
 
 		m_SquareVA.reset(Spring::VertexArray::Create());
-		float squareVertices[3 * 4] = {
-			-0.5f, -0.5f, 0.0f,
-			 0.5f, -0.5f, 0.0f,
-			 0.5f,  0.5f, 0.0f,
-			-0.5f,  0.5f, 0.0f
+		float squareVertices[5 * 4] = {
+			-0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
+			 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
+			 0.5f,  0.5f, 0.0f, 1.0f, 1.0f,
+			-0.5f,  0.5f, 0.0f, 0.0f, 1.0f
 		};
 
 		Spring::Ref<Spring::VertexBuffer> squareVB;
 		squareVB.reset(Spring::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
-			{ Spring::ShaderDataType::Float3, "a_Position" }
-			});
+			{ Spring::ShaderDataType::Float3, "a_Position" },
+			{ Spring::ShaderDataType::Float2, "a_TexCoord" }
+		});
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
@@ -125,6 +126,41 @@ public:
 		)";
 
 		m_FlatColorShader.reset(Spring::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+
+		std::string textureShaderVertexSrc = R"(
+			#version 330 core
+			
+			layout(location = 0) in vec3 a_Position;
+			layout(location = 1) in vec2 a_TexCoord;
+			uniform mat4 u_ViewProjection;
+			uniform mat4 u_Transform;
+			out vec2 v_TexCoord;
+			void main()
+			{
+				v_TexCoord = a_TexCoord;
+				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);	
+			}
+		)";
+
+		std::string textureShaderFragmentSrc = R"(
+			#version 330 core
+			
+			layout(location = 0) out vec4 color;
+			in vec2 v_TexCoord;
+			
+			uniform sampler2D u_Texture;
+			void main()
+			{
+				color = texture(u_Texture, v_TexCoord);
+			}
+		)";
+
+		m_TextureShader.reset(Spring::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
+
+		m_Texture = Spring::Texture2D::Create("assets/textures/Checkerboard.png");
+
+		std::dynamic_pointer_cast<Spring::OpenGLShader>(m_TextureShader)->Bind();
+		std::dynamic_pointer_cast<Spring::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(Spring::Timestep ts) override
@@ -167,7 +203,11 @@ public:
 			}
 		}
 
-		Spring::Renderer::Submit(m_Shader, m_VertexArray);
+		// Triangle
+		//Spring::Renderer::Submit(m_Shader, m_VertexArray);
+
+		m_Texture->Bind();
+		Spring::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		Spring::Renderer::EndScene();
 	}
@@ -187,8 +227,10 @@ private:
 	Spring::Ref<Spring::Shader> m_Shader;
 	Spring::Ref<Spring::VertexArray> m_VertexArray;
 
-	Spring::Ref<Spring::Shader> m_FlatColorShader;
+	Spring::Ref<Spring::Shader> m_FlatColorShader, m_TextureShader;
 	Spring::Ref<Spring::VertexArray> m_SquareVA;
+
+	Spring::Ref<Spring::Texture2D> m_Texture;
 
 	Spring::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
