@@ -158,6 +158,7 @@ public:
 		m_TextureShader.reset(Spring::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
 
 		m_Texture = Spring::Texture2D::Create("assets/textures/Checkerboard.png");
+		m_ChernoLogoTexture = Spring::Texture2D::Create("assets/textures/ChernoLogo.png");
 
 		std::dynamic_pointer_cast<Spring::OpenGLShader>(m_TextureShader)->Bind();
 		std::dynamic_pointer_cast<Spring::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
@@ -208,6 +209,8 @@ public:
 
 		m_Texture->Bind();
 		Spring::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		m_ChernoLogoTexture->Bind();
+		Spring::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		Spring::Renderer::EndScene();
 	}
@@ -230,7 +233,7 @@ private:
 	Spring::Ref<Spring::Shader> m_FlatColorShader, m_TextureShader;
 	Spring::Ref<Spring::VertexArray> m_SquareVA;
 
-	Spring::Ref<Spring::Texture2D> m_Texture;
+	Spring::Ref<Spring::Texture2D> m_Texture, m_ChernoLogoTexture;
 
 	Spring::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
