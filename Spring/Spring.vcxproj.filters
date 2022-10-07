@@ -66,6 +66,9 @@
     <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
@@ -123,6 +126,9 @@
     <ClInclude Include="src\Spring\MouseButtonCodes.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spring\OrthographicCameraController.h">
+      <Filter>src\Spring</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spring\Renderer\Buffer.h">
       <Filter>src\Spring\Renderer</Filter>
     </ClInclude>
@@ -142,6 +148,9 @@
       <Filter>src\Spring\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Spring\Renderer\Shader.h">
+      <Filter>src\Spring\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spring\Renderer\Texture.h">
       <Filter>src\Spring\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Spring\Renderer\VertexArray.h">
@@ -1401,11 +1410,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\Renderer\Texture.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h" />
-    <ClInclude Include="src\Spring\OrthographicCameraController.h">
-      <Filter>src\Spring\Renderer</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1418,6 +1422,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
@@ -1447,6 +1454,9 @@
     <ClCompile Include="src\Spring\Log.cpp">
       <Filter>src\Spring</Filter>
     </ClCompile>
+    <ClCompile Include="src\Spring\OrthographicCameraController.cpp">
+      <Filter>src\Spring</Filter>
+    </ClCompile>
     <ClCompile Include="src\Spring\Renderer\Buffer.cpp">
       <Filter>src\Spring\Renderer</Filter>
     </ClCompile>
@@ -1465,6 +1475,9 @@
     <ClCompile Include="src\Spring\Renderer\Shader.cpp">
       <Filter>src\Spring\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Spring\Renderer\Texture.cpp">
+      <Filter>src\Spring\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Spring\Renderer\VertexArray.cpp">
       <Filter>src\Spring\Renderer</Filter>
     </ClCompile>
@@ -1473,11 +1486,6 @@
     </ClCompile>
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Spring\Renderer\Texture.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp" />
-    <ClCompile Include="src\Spring\OrthographicCameraController.cpp">
-      <Filter>src\Spring\Renderer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
