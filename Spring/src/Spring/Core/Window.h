@@ -2,7 +2,7 @@
 
 #include "sppch.h"
 
-#include "Spring/Core.h"
+#include "Spring/Core/Core.h"
 #include "Spring/Events/Event.h"
 
 namespace Spring {

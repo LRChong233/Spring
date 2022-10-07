@@ -1,11 +1,11 @@
 #include "sppch.h"
 #include "Application.h"
 
-#include "Spring/Log.h"
+#include "Spring/Core/Log.h"
 
 #include "Spring/Renderer/Renderer.h"
 
-#include "Spring/Input.h"
+#include "Spring/Core/Input.h"
 
 #include "GLFW/glfw3.h"
 

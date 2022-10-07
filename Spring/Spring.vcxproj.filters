@@ -81,16 +81,16 @@
     <ClInclude Include="src\Spring.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\Application.h">
+    <ClInclude Include="src\Spring\Core\Application.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\Core.h">
+    <ClInclude Include="src\Spring\Core\Core.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
     <ClInclude Include="src\Spring\Core\Timestep.h">
       <Filter>src\Spring\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\EntryPoint.h">
+    <ClInclude Include="src\Spring\Core\EntryPoint.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
     <ClInclude Include="src\Spring\Events\ApplicationEvent.h">
@@ -108,22 +108,22 @@
     <ClInclude Include="src\Spring\ImGui\ImGuiLayer.h">
       <Filter>src\Spring\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\Input.h">
+    <ClInclude Include="src\Spring\Core\Input.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\KeyCodes.h">
+    <ClInclude Include="src\Spring\Core\KeyCodes.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\Layer.h">
+    <ClInclude Include="src\Spring\Core\Layer.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\LayerStack.h">
+    <ClInclude Include="src\Spring\Core\LayerStack.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\Log.h">
+    <ClInclude Include="src\Spring\Core\Log.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\MouseButtonCodes.h">
+    <ClInclude Include="src\Spring\Core\MouseButtonCodes.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
     <ClInclude Include="src\Spring\OrthographicCameraController.h">
@@ -156,7 +156,7 @@
     <ClInclude Include="src\Spring\Renderer\VertexArray.h">
       <Filter>src\Spring\Renderer</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\Window.h">
+    <ClInclude Include="src\Spring\Core\Window.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
     <ClInclude Include="src\sppch.h">
@@ -1436,7 +1436,7 @@
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\Spring\Application.cpp">
+    <ClCompile Include="src\Spring\Core\Application.cpp">
       <Filter>src\Spring</Filter>
     </ClCompile>
     <ClCompile Include="src\Spring\ImGui\ImGuiBuild.cpp">
@@ -1445,13 +1445,13 @@
     <ClCompile Include="src\Spring\ImGui\ImGuiLayer.cpp">
       <Filter>src\Spring\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="src\Spring\Layer.cpp">
+    <ClCompile Include="src\Spring\Core\Layer.cpp">
       <Filter>src\Spring</Filter>
     </ClCompile>
-    <ClCompile Include="src\Spring\LayerStack.cpp">
+    <ClCompile Include="src\Spring\Core\LayerStack.cpp">
       <Filter>src\Spring</Filter>
     </ClCompile>
-    <ClCompile Include="src\Spring\Log.cpp">
+    <ClCompile Include="src\Spring\Core\Log.cpp">
       <Filter>src\Spring</Filter>
     </ClCompile>
     <ClCompile Include="src\Spring\OrthographicCameraController.cpp">

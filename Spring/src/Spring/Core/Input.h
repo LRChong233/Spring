@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Spring/Core.h"
+#include "Spring/Core/Core.h"
 
 namespace Spring {
 

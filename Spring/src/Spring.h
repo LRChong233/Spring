@@ -2,13 +2,13 @@
 
 // For use by Spring applications
 
-#include "Spring/Application.h"
-#include "Spring/Layer.h"
-#include "Spring/Log.h"
+#include "Spring/Core/Application.h"
+#include "Spring/Core/Layer.h"
+#include "Spring/Core/Log.h"
 
-#include "Spring/Input.h"
-#include "Spring/KeyCodes.h"
-#include "Spring/MouseButtonCodes.h"
+#include "Spring/Core/Input.h"
+#include "Spring/Core/KeyCodes.h"
+#include "Spring/Core/MouseButtonCodes.h"
 #include "Spring/OrthographicCameraController.h"
 
 #include "Spring/ImGui/ImGuiLayer.h"
@@ -26,5 +26,5 @@
 // -------------------------------------------
 
 // ------------ Entry Point ------------------
-#include "Spring//EntryPoint.h"
+#include "Spring/Core/EntryPoint.h"
 // -------------------------------------------

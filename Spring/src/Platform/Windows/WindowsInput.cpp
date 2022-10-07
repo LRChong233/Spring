@@ -1,7 +1,7 @@
 #include "sppch.h"
 #include "WindowsInput.h"
 
-#include "Spring/Application.h"
+#include "Spring/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace Spring {

@@ -3,11 +3,11 @@
 #include "Core.h"
 
 #include "Window.h"
-#include "Spring/LayerStack.h"
+#include "Spring/Core/LayerStack.h"
 #include "Spring/Events/Event.h"
 #include "Spring/Events/ApplicationEvent.h"
 
-#include "Core/Timestep.h"
+#include "Timestep.h"
 #include "Spring/ImGui/ImGuiLayer.h"
 
 namespace Spring {

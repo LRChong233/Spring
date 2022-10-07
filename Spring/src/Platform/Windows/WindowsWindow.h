@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Spring/Window.h"
+#include "Spring/Core/Window.h"
 #include "Platform/OpenGL/OpenGLContext.h"
 
 #include <GLFW/glfw3.h>

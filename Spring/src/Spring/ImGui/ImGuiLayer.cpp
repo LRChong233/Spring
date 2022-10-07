@@ -5,7 +5,7 @@
 #include "backends/imgui_impl_glfw.h"
 #include "backends/imgui_impl_opengl3.h"
 
-#include "Spring/Application.h"
+#include "Spring/Core/Application.h"
 
 // TEMPORARY
 #include <GLFW/glfw3.h>

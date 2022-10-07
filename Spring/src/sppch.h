@@ -12,7 +12,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "Spring/Log.h"
+#include "Spring/Core/Log.h"
 
 #ifdef SP_PLATFORM_WINDOWS
 	#include <Windows.h>

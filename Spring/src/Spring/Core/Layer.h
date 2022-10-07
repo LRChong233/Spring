@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Spring/Core.h"
+#include "Spring/Core/Core.h"
 #include "Spring/Events/Event.h"
 
-#include "Core/Timestep.h"
+#include "Timestep.h"
 
 namespace Spring {
 

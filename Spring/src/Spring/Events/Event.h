@@ -1,7 +1,7 @@
 #pragma once
 
 #include "sppch.h"
-#include "Spring/Core.h"
+#include "Spring/Core/Core.h"
 
 namespace Spring {
 

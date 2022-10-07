@@ -1,8 +1,8 @@
 #include "sppch.h"
 #include "OrthographicCameraController.h"
 
-#include "Spring/Input.h"
-#include "Spring/KeyCodes.h"
+#include "Spring/Core/Input.h"
+#include "Spring/Core/KeyCodes.h"
 
 namespace Spring {
 
