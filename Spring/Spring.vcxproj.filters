@@ -1403,6 +1403,9 @@
     </ClInclude>
     <ClInclude Include="src\Spring\Renderer\Texture.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h" />
+    <ClInclude Include="src\Spring\OrthographicCameraController.h">
+      <Filter>src\Spring\Renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1473,5 +1476,8 @@
     </ClCompile>
     <ClCompile Include="src\Spring\Renderer\Texture.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp" />
+    <ClCompile Include="src\Spring\OrthographicCameraController.cpp">
+      <Filter>src\Spring\Renderer</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

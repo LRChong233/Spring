@@ -9,6 +9,7 @@
 #include "Spring/Input.h"
 #include "Spring/KeyCodes.h"
 #include "Spring/MouseButtonCodes.h"
+#include "Spring/OrthographicCameraController.h"
 
 #include "Spring/ImGui/ImGuiLayer.h"
 
