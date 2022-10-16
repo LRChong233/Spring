@@ -24,7 +24,3 @@
 
 #include "Spring/Renderer/OrthographicCamera.h"
 // -------------------------------------------
-
-// ------------ Entry Point ------------------
-#include "Spring/Core/EntryPoint.h"
-// -------------------------------------------

@@ -1,4 +1,5 @@
 #include <Spring.h>
+#include <Spring/Core/EntryPoint.h>
 
 #include "Platform/OpenGL/OpenGLShader.h"
 
@@ -13,7 +14,7 @@ public:
 	ExampleLayer()
 		: Layer("Example"), m_CameraController(1280.0f / 720.0f)
 	{
-		m_VertexArray.reset(Spring::VertexArray::Create());
+		m_VertexArray = Spring::VertexArray::Create();
 		float vertices[3 * 7] = {
 			-0.5f, -0.5f, 0.0f, 0.8f, 0.2f, 0.8f, 1.0f,
 			0.5f, -0.5f, 0.0f, 0.2f, 0.3f, 0.8f, 1.0f,
@@ -72,7 +73,7 @@ public:
 		m_Shader = Spring::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
 
 
-		m_SquareVA.reset(Spring::VertexArray::Create());
+		m_SquareVA = Spring::VertexArray::Create();
 		float squareVertices[5 * 4] = {
 			-0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
 			 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
