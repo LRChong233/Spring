@@ -26,8 +26,12 @@ void Sandbox2D::OnUpdate(Spring::Timestep ts)
 	m_CameraController.OnUpdate(ts);
 
 	// Render
+	Spring::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
+	Spring::RenderCommand::Clear();
+
 	Spring::Renderer2D::BeginScene(m_CameraController.GetCamera());
-	Spring::Renderer2D::DrawQuad({ 0.0f, 0.0f }, { 1.0f, 1.0f }, { 0.8f, 0.2f, 0.3f, 1.0f });
+	Spring::Renderer2D::DrawQuad({ -1.0f, 0.0f }, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
+	Spring::Renderer2D::DrawQuad({ 0.5f, -0.5f }, { 0.5f, 0.75f }, { 0.2f, 0.3f, 0.8f, 1.0f });
 	Spring::Renderer::EndScene();
 }
 
