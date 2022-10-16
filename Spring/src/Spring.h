@@ -15,6 +15,7 @@
 
 // ---Renderer--------------------------------
 #include "Spring/Renderer/Renderer.h"
+#include "Spring/Renderer/Renderer2D.h"
 #include "Spring/Renderer/RenderCommand.h"
 
 #include "Spring/Renderer/Buffer.h"

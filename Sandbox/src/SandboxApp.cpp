@@ -24,7 +24,7 @@ public:
 		};
 
 		Spring::Ref<Spring::VertexBuffer> vertexBuffer;
-		vertexBuffer.reset(Spring::VertexBuffer::Create(vertices, sizeof(vertices)));
+		vertexBuffer = Spring::VertexBuffer::Create(vertices, sizeof(vertices));
 		Spring::BufferLayout layout = {
 			{Spring::ShaderDataType::Float3, "a_Position"},
 			{Spring::ShaderDataType::Float4, "a_Color"}
@@ -34,7 +34,7 @@ public:
 
 		uint32_t indices[3] = { 0, 1, 2 };
 		Spring::Ref<Spring::IndexBuffer> indexBuffer;
-		indexBuffer.reset(Spring::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+		indexBuffer = Spring::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
 		std::string vertexSrc = R"(
@@ -84,7 +84,7 @@ public:
 		};
 
 		Spring::Ref<Spring::VertexBuffer> squareVB;
-		squareVB.reset(Spring::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+		squareVB = Spring::VertexBuffer::Create(squareVertices, sizeof(squareVertices));
 		squareVB->SetLayout({
 			{ Spring::ShaderDataType::Float3, "a_Position" },
 			{ Spring::ShaderDataType::Float2, "a_TexCoord" }
@@ -93,7 +93,7 @@ public:
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
 		Spring::Ref<Spring::IndexBuffer> squareIB;
-		squareIB.reset(Spring::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		squareIB = Spring::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
 		std::string flatColorShaderVertexSrc = R"(
