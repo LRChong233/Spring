@@ -15,6 +15,8 @@ namespace Spring {
 
 	void OpenGLContext::Init()
 	{
+		SP_PROFILE_FUNCTION();
+
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		SP_CORE_ASSERT(status, "Failed to initialize Glad!");
