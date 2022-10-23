@@ -14,6 +14,8 @@
 
 #include "Spring/Core/Log.h"
 
+#include "Spring/Debug/Instrumentor.h"
+
 #ifdef SP_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
