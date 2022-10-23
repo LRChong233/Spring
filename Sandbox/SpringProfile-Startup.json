@@ -1,1 +1,1 @@
-{"otherData": {}, "traceEvent":[]}
+{"otherData": {}, "traceEvent":[{"cat":"function","dur":317,"name":"void __cdecl Spring::Application::PushOverlay(class Spring::Layer *)","ph":"X","pid":0,"tid":4223357915,"ts":928341771674},{"cat":"function","dur":306495,"name":"__cdecl Spring::Application::Application(void)","ph":"X","pid":0,"tid":4223357915,"ts":928341465716},{"cat":"function","dur":519,"name":"void __cdecl Spring::Application::PushLayer(class Spring::Layer *)","ph":"X","pid":0,"tid":4223357915,"ts":928341772277}]}
