@@ -165,7 +165,7 @@
     <ClInclude Include="src\Spring\Core\LayerStack.h" />
     <ClInclude Include="src\Spring\Core\Log.h" />
     <ClInclude Include="src\Spring\Core\MouseButtonCodes.h" />
-    <ClInclude Include="src\Spring\OrthographicCameraController.h" />
+    <ClInclude Include="src\Spring\Renderer\OrthographicCameraController.h" />
     <ClInclude Include="src\Spring\Renderer\Buffer.h" />
     <ClInclude Include="src\Spring\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Spring\Renderer\OrthographicCamera.h" />
@@ -610,7 +610,7 @@
     <ClCompile Include="src\Spring\Core\Layer.cpp" />
     <ClCompile Include="src\Spring\Core\LayerStack.cpp" />
     <ClCompile Include="src\Spring\Core\Log.cpp" />
-    <ClCompile Include="src\Spring\OrthographicCameraController.cpp" />
+    <ClCompile Include="src\Spring\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Spring\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Spring\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Spring\Renderer\RenderCommand.cpp" />

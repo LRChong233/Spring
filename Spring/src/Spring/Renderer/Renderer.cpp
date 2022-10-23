@@ -10,6 +10,8 @@ namespace Spring {
 
 	void Renderer::Init()
 	{
+		SP_PROFILE_FUNCTION();
+
 		RenderCommand::Init();
 		Renderer2D::Init();
 	}

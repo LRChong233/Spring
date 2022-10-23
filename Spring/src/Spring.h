@@ -9,7 +9,7 @@
 #include "Spring/Core/Input.h"
 #include "Spring/Core/KeyCodes.h"
 #include "Spring/Core/MouseButtonCodes.h"
-#include "Spring/OrthographicCameraController.h"
+#include "Spring/Renderer/OrthographicCameraController.h"
 
 #include "Spring/ImGui/ImGuiLayer.h"
 

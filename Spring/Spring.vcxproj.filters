@@ -126,7 +126,7 @@
     <ClInclude Include="src\Spring\Core\MouseButtonCodes.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spring\OrthographicCameraController.h">
+    <ClInclude Include="src\Spring\Renderer\OrthographicCameraController.h">
       <Filter>src\Spring</Filter>
     </ClInclude>
     <ClInclude Include="src\Spring\Renderer\Buffer.h">
@@ -1456,7 +1456,7 @@
     <ClCompile Include="src\Spring\Core\Log.cpp">
       <Filter>src\Spring</Filter>
     </ClCompile>
-    <ClCompile Include="src\Spring\OrthographicCameraController.cpp">
+    <ClCompile Include="src\Spring\Renderer\OrthographicCameraController.cpp">
       <Filter>src\Spring</Filter>
     </ClCompile>
     <ClCompile Include="src\Spring\Renderer\Buffer.cpp">

@@ -41,6 +41,8 @@ namespace Spring {
 
 	void OrthographicCameraController::OnEvent(Event & e)
 	{
+		SP_PROFILE_FUNCTION();
+
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<MouseScrolledEvent>(SP_BIND_EVENT_FN(OrthographicCameraController::OnMouseScrolled));
 		dispatcher.Dispatch<WindowResizeEvent>(SP_BIND_EVENT_FN(OrthographicCameraController::OnWindowResize));
@@ -48,6 +50,8 @@ namespace Spring {
 
 	bool OrthographicCameraController::OnMouseScrolled(MouseScrolledEvent & e)
 	{
+		SP_PROFILE_FUNCTION();
+
 		m_ZoomLevel -= e.GetYOffset() * 0.25f;
 		m_ZoomLevel = std::max(m_ZoomLevel, 0.25f);
 		m_Camera.SetProjection(-m_AspectRatio * m_ZoomLevel, m_AspectRatio*m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
@@ -56,6 +60,8 @@ namespace Spring {
 
 	bool OrthographicCameraController::OnWindowResize(WindowResizeEvent & e)
 	{
+		SP_PROFILE_FUNCTION();
+
 		m_AspectRatio = (float)e.GetWidth() / (float)e.GetHeight();
 		m_Camera.SetProjection(-m_AspectRatio * m_ZoomLevel, m_AspectRatio*m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
 		return false;

@@ -20,6 +20,8 @@ namespace Spring {
 
 	void ImGuiLayer::OnAttach()
 	{
+		SP_PROFILE_FUNCTION();
+
 		// Setup Dear ImGui contex
 		IMGUI_CHECKVERSION();
 		ImGui::CreateContext();
@@ -54,6 +56,8 @@ namespace Spring {
 
 	void ImGuiLayer::OnDetach()
 	{
+		SP_PROFILE_FUNCTION();
+
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
 		ImGui::DestroyContext();
@@ -61,6 +65,8 @@ namespace Spring {
 
 	void ImGuiLayer::Begin()
 	{
+		SP_PROFILE_FUNCTION();
+
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
@@ -68,6 +74,8 @@ namespace Spring {
 
 	void ImGuiLayer::End()
 	{
+		SP_PROFILE_FUNCTION();
+
 		ImGuiIO& io = ImGui::GetIO();
 		Application& app = Application::Get();
 		io.DisplaySize = ImVec2((float)app.GetWindow().GetWidth(), (float)app.GetWindow().GetHeight());
