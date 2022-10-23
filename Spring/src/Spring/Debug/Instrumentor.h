@@ -71,13 +71,13 @@ namespace Spring {
 
 		void WriteHeader()
 		{
-			m_OutputStream << "{\"otherData\": {}, \"traceEvent\":[";
+			m_OutputStream << "[";
 			m_OutputStream.flush();
 		}
 
 		void WriteFooter()
 		{
-			m_OutputStream << "]}";
+			m_OutputStream << "]";
 			m_OutputStream.flush();
 		}
 

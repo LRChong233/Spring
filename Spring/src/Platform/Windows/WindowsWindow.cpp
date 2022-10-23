@@ -9,7 +9,7 @@
 
 namespace Spring {
 
-	static bool s_GLFWInitialized = false;
+	static int s_GLFWWindowCount = 0;
 
 	static void GLFWErrorCallback(int error, const char* description)
 	{
@@ -23,11 +23,15 @@ namespace Spring {
 
 	WindowsWindow::WindowsWindow(const WindowProps& props)
 	{
+		SP_PROFILE_FUNCTION();
+
 		Init(props);
 	}
 
 	WindowsWindow::~WindowsWindow()
 	{
+		SP_PROFILE_FUNCTION();
+
 		Shutdown();
 	}
 
@@ -39,17 +43,19 @@ namespace Spring {
 
 		SP_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
-		if (!s_GLFWInitialized)
+		if (s_GLFWWindowCount == 0)
 		{
-			// TODO: glfwTerminate on system shutdown
+			SP_PROFILE_SCOPE("glfwInit");
 			int success = glfwInit();
 			SP_CORE_ASSERT(success, "Could not intialize GLFW!");
-
 			glfwSetErrorCallback(GLFWErrorCallback);
-			s_GLFWInitialized = true;
 		}
 
-		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
+		{
+			SP_PROFILE_SCOPE("glfwCreateWindow");
+			m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
+			++s_GLFWWindowCount;
+		}
 
 		m_Context = new OpenGLContext(m_Window);
 		m_Context->Init();
@@ -150,17 +156,24 @@ namespace Spring {
 
 	void WindowsWindow::Shutdown()
 	{
+		SP_PROFILE_FUNCTION();
+
 		glfwDestroyWindow(m_Window);
+		--s_GLFWWindowCount;
 	}
 
 	void WindowsWindow::OnUpdate()
 	{
+		SP_PROFILE_FUNCTION();
+
 		glfwPollEvents();
 		m_Context->SwapBuffers();
 	}
 
 	void WindowsWindow::SetVSync(bool enabled)
 	{
+		SP_PROFILE_FUNCTION();
+
 		if (enabled)
 			glfwSwapInterval(1);
 		else

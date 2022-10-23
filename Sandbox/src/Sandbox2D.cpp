@@ -13,11 +13,14 @@ Sandbox2D::Sandbox2D()
 
 void Sandbox2D::OnAttach()
 {
+	SP_PROFILE_FUNCTION();
+
 	m_CheckerboardTexture = Spring::Texture2D::Create("assets/textures/Checkerboard.png");
 }
 
 void Sandbox2D::OnDetach()
 {
+	SP_PROFILE_FUNCTION();
 }
 
 void Sandbox2D::OnUpdate(Spring::Timestep ts)
@@ -25,10 +28,7 @@ void Sandbox2D::OnUpdate(Spring::Timestep ts)
 	SP_PROFILE_FUNCTION();
 
 	// Update
-	{
-		SP_PROFILE_SCOPE("CameraController::OnUpdate");
-		m_CameraController.OnUpdate(ts);
-	}
+	m_CameraController.OnUpdate(ts);
 
 	// Render
 	{
