@@ -40,7 +40,7 @@ void Sandbox2D::OnUpdate(Spring::Timestep ts)
 	{
 		SP_PROFILE_SCOPE("Renderer Draw");
 		Spring::Renderer2D::BeginScene(m_CameraController.GetCamera());
-		Spring::Renderer2D::DrawQuad({ -1.0f, 0.0f }, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
+		Spring::Renderer2D::DrawRotateQuad({ -1.0f, 0.0f }, { 0.8f, 0.8f }, 45.0f, { 0.8f, 0.2f, 0.3f, 1.0f });
 		Spring::Renderer2D::DrawQuad({ 0.5f, -0.5f }, { 0.5f, 0.75f }, { 0.2f, 0.3f, 0.8f, 1.0f });
 		Spring::Renderer2D::DrawQuad({ 0.0f, 0.0f, -0.1f }, { 10.0f, 10.0f }, m_CheckerboardTexture);
 		Spring::Renderer::EndScene();
